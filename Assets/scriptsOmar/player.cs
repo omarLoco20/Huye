@@ -6,6 +6,9 @@ public class player : MonoBehaviour
 {
     public canavasManager _cManager;
     string text1 = "Perdona que te diga esto de esta forma, decidi huir, no aguante mas esta situacion";
+    string textVozPuerta = "Debo encontrar las llaves primero";
+    string textVozEscalera = "Ir arriba es inutil ahora mismo";
+    string txtNulo = "";
     // Start is called before the first frame update
     void Start()
     {
@@ -39,13 +42,40 @@ public class player : MonoBehaviour
 
             }
         }
-       
+
+       else if(other.gameObject.tag == "puerta")
+        {
+            _cManager.pnlTextE.SetActive(true);
+
+            if (Input.GetKeyDown("e"))
+            {
+               
+                    modifyTextVoz(textVozPuerta);
+                Invoke("vaciarTextVoz",3f);            
+
+
+            }
+        }
+       else if (other.gameObject.tag == "escalera")
+        {
+            _cManager.pnlTextE.SetActive(true);
+
+            if (Input.GetKeyDown("e"))
+            {
+
+                modifyTextVoz(textVozEscalera);
+                Invoke("vaciarTextVoz", 3f);
+
+
+            }
+        }
+
     }
 
     
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "nota")
+        if (other.gameObject.tag == "nota" || other.gameObject.tag == "puerta" || other.gameObject.tag == "escalera")
         {
             _cManager.pnlTextE.SetActive(false);
         }
@@ -59,5 +89,14 @@ public class player : MonoBehaviour
     {
         _cManager.pnlTextBase.SetActive(dependiente);
         _cManager.textPanel.text = text ;
+    }
+
+    public void modifyTextVoz(string text)
+    {
+        _cManager.textVox.text= text ;
+    }
+    private void vaciarTextVoz()
+    {
+        _cManager.textVox.text = txtNulo;
     }
 }

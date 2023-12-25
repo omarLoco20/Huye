@@ -7,6 +7,7 @@ public class canavasManager : MonoBehaviour
     public GameObject pnlTextE;
     public GameObject pnlTextBase;
     public Text textPanel;
+    public Text textVox;
     // Start is called before the first frame update
     void Start()
     {
