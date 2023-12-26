@@ -9,6 +9,7 @@ public class player : MonoBehaviour
     string textVozPuerta = "Debo encontrar las llaves primero";
     string textVozEscalera = "Ir arriba es inutil ahora mismo";
     string txtNulo = "";
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -95,7 +96,7 @@ public class player : MonoBehaviour
     {
         _cManager.textVox.text= text ;
     }
-    private void vaciarTextVoz()
+    public void vaciarTextVoz()
     {
         _cManager.textVox.text = txtNulo;
     }
