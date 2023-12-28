@@ -82,6 +82,8 @@ public class player : MonoBehaviour
         }
     }
 
+    
+
     //crear funcion que active un panle y ese panel tenga el texto,
     //pero ese texto nosotros se lo pasaremos tendremos varios strings
     //para cada nota,

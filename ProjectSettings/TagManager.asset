@@ -8,6 +8,9 @@ TagManager:
   - puerta
   - escalera
   - susto1
+  - susto2
+  - susto3
+  - susto4
   layers:
   - Default
   - TransparentFX

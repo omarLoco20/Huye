@@ -9,6 +9,10 @@ public class scriptDJ : MonoBehaviour
     public AudioClip fosforo;
     public AudioClip grito;
     public AudioClip respiracion;
+    public AudioClip arrastre;
+    public AudioClip caida;
+    public AudioClip puertaChillido;
+    public AudioClip pasos;
 
     // Start is called before the first frame update
    
@@ -19,5 +23,11 @@ public class scriptDJ : MonoBehaviour
     public void playGrito()
     {
         ass.PlayOneShot(grito);
+    }
+
+    public void playCualquiera(AudioClip clip)
+    {
+        ass.PlayOneShot(clip);
+
     }
 }
