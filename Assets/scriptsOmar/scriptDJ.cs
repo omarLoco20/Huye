@@ -13,6 +13,7 @@ public class scriptDJ : MonoBehaviour
     public AudioClip caida;
     public AudioClip puertaChillido;
     public AudioClip pasos;
+    public AudioClip Boom;
 
     // Start is called before the first frame update
    

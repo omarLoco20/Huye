@@ -5,7 +5,7 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     public canavasManager _cManager;
-    string text1 = "Perdona que te diga esto de esta forma, decidi huir, no aguante mas esta situacion";
+    string text1 = "Lo siento, no te pude ayudar, esa casa tiene algo misterioso, te recomiendo que huyas de ahi";
     string textVozPuerta = "Debo encontrar las llaves primero";
     string textVozEscalera = "Ir arriba es inutil ahora mismo";
     string txtNulo = "";
