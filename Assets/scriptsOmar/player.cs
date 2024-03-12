@@ -5,8 +5,8 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     public canavasManager _cManager;
-    string text1 = "Lo siento, no te pude ayudar, esa casa tiene algo misterioso, te recomiendo que huyas de ahi";
-    string textVozPuerta = "Debo encontrar las llaves primero";
+    string text1 = "Lo siento, no te puedo ayudar, esa casa tiene algo misterioso, te recomiendo que salgas de ahi lo antes posible";
+    string textVozPuerta = "Debo encontrar la llave para poder abrirla";
     string textVozEscalera = "Ir arriba es inutil ahora mismo";
     string txtNulo = "";
     
@@ -34,7 +34,7 @@ public class player : MonoBehaviour
                 {
                     activarYPasarTxt(text1, false);
                 }
-                else if (_cManager.pnlTextBase.activeSelf == false)
+                 else if (_cManager.pnlTextBase.activeSelf == false)
                 {
                     activarYPasarTxt(text1, true);
 

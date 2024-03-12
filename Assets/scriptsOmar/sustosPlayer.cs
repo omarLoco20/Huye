@@ -7,7 +7,8 @@ public class sustosPlayer : MonoBehaviour
     public GameObject susto1Image;
     public scriptDJ _Dj;
     public managerSustos _mSustos;
-    public GameObject objectS1,objectS2, objectS3, objectS4;
+    public player _player;
+    public GameObject objectS1,objectS2, objectS3, objectS4, objectS5;
     //susto 1
     public GameObject activar;
     public GameObject desactivar;
@@ -18,10 +19,16 @@ public class sustosPlayer : MonoBehaviour
     public Transform cruz2;
     public Transform cruz3;
     bool susto3Play = false;
+    bool susto6Play = false;
+
 
     //susto4
+    public string irCuadros = "Debo ver los cuadros, ahi encontrare pistas";
     public GameObject ojosAbiertos;
     public GameObject ojosCerrados;
+
+    //susto5
+    string ventanasText = "Me parecio ver algo en la ventana, debo revisar";
 
     //cuadros
     public GameObject niña, niña1, niña2, niña3;
@@ -48,6 +55,13 @@ public class sustosPlayer : MonoBehaviour
                 susto3Play=false;
             }
         }
+        if (_mSustos.susto6)
+        {
+            susto6Function();
+            //susto6Play = false;
+        }
+
+
     }
 
 
@@ -71,6 +85,14 @@ public class sustosPlayer : MonoBehaviour
         if (other.gameObject.tag == "susto4")
         {
             susto4Function();
+
+        }
+        if (other.gameObject.tag == "susto5")
+        {
+            
+            susto5FunctionScreemer();
+            
+
 
         }
     }
@@ -134,6 +156,41 @@ public class sustosPlayer : MonoBehaviour
             objectS4.SetActive(false);
 
         }
+    }
+
+    public void susto5FunctionScreemer()
+    {
+        if(_mSustos.susto5)
+        {
+            _Dj.playCualquiera(_Dj.grito);
+            _player._cManager.pnlScreemer.SetActive(true);
+            objectS5.SetActive(false);
+            Invoke("susto5Close", 2);
+
+
+        }       
+
+
+    }
+
+    public void susto6Function()
+    {
+        if (_mSustos.susto6)
+        {
+            _mSustos.pnlThanks.SetActive(true);
+            Cursor.visible = true;
+
+
+        }
+
+
+    }
+
+
+
+    public void susto5Close()
+    {
+        _player._cManager.pnlScreemer.SetActive(false);
     }
 
 

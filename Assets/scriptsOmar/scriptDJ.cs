@@ -14,6 +14,7 @@ public class scriptDJ : MonoBehaviour
     public AudioClip puertaChillido;
     public AudioClip pasos;
     public AudioClip Boom;
+    public AudioClip campanas;
 
     // Start is called before the first frame update
    

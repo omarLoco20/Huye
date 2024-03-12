@@ -11,6 +11,7 @@ TagManager:
   - susto2
   - susto3
   - susto4
+  - susto5
   layers:
   - Default
   - TransparentFX

@@ -26,10 +26,7 @@ public class scriptScene : MonoBehaviour
                 Time.timeScale = 0;
             }
         }
-        if(Input.GetKeyDown (KeyCode.Escape)) 
-        {
-            menu();
-        }
+        
     }
     public void play()
     {
